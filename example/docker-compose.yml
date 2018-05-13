@@ -1,0 +1,12 @@
+version: '2'
+services:
+  pebble_app:
+    image: zimosworld/pebble:latest
+    container_name: pebble_app
+    volumes:
+      - ./data:/var/pebble
+    ports:
+      - 14000:14000
+      - 5002:5002
+      - 5001:5001
+    network_mode: "bridge"
